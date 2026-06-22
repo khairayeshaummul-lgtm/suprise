@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Welcome</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+
+            background-image: url("Untitled design.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+           
+        }
+        .container{
+            text-align: center;
+
+
+            button{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.nextbutton{
+      height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+   padding-left: 15px;
+   padding-right: 15px;
+   background-image: url(bu.jpg);
+   background-size: cover;
+   color: rgb(7, 126, 101);
+   border:none;
+   border-radius: 7px;
+   font-weight: bold;
+   font-size: 20px;
+   
+}
+.nextbutton:hover{
+    background-image: none;
+    background-color:  rgb(7, 126, 101);
+    color: url(cover-1.jpg);
+    transition: opacity 0.5s;
+
+}
+.nextbutton:active{
+    opacity: 0.5;
+}
+        }
+.arrow {
+    font-size: 40px;
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(10px);
+    }
+}
+
+
+
+
+
+
+    </style>
+</head>
+<div class="container">
+
+
+<p
+  style="
+  font-size: 60px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  color: rgb(103, 234, 164);
+  
+  
+  "
+>Welcome to the underwater!!
+
+</p>
+<p 
+  style="
+   font-size: 35px;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  margin-top: 50px;
+  color: rgb(82, 134, 4);
+
+    
+  "
+>
+   (Click next to continue)
+</p>
+
+<div class="arrow">↓</div>
+<a href = "final2.html">
+<button class="nextbutton"
+   
+
+
+
+>
+
+Next</button>
+</a>
+</div>
+
+

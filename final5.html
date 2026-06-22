@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Are you ready?</title>
+         <style>
+        body{
+             margin: 0;
+            height: 100vh;
+
+            background-image: url("cover-3.jpg");
+            background-size: cover;
+            background-position: bottom;
+            background-repeat: no-repeat;
+           
+        }
+
+        .question1{
+            position:absolute;
+            top:180px;
+            left:20%;
+        }
+
+
+ .fish {
+  position: absolute;
+  width: 38px;
+  top: 100px;
+
+  animation: swimLeft 12s linear infinite;
+}
+
+.fish2 {
+  position: absolute;
+  width: 48px;
+  top: 360px;
+
+  animation: swimLeft 10s linear infinite;
+}
+
+.fish3 {
+  position: absolute;
+  width: 65px;
+  bottom: 40px;
+ 
+
+  animation: swimRight 14s linear infinite;
+}
+
+/* Right → Left */
+@keyframes swimLeft {
+  0% {
+    left: 100%;
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  75% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    left: -50px; /* moves fully off-screen */
+    transform: translateY(0);
+  }
+}
+
+/* Left → Right */
+@keyframes swimRight {
+  0% {
+    left: -50px;
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-20px);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  75% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    left: 100%;
+    transform: translateY(0);
+  }
+}
+
+
+.submit{
+  margin-top: 20px;
+  background-color: rgb(0, 128, 0);
+  color:white;
+  border:none;
+  border-radius:8px;
+  padding:10px;
+  position:absolute;
+  left:28%;
+
+}
+   .question{
+    font-size: 50px;
+    color:rgb(3, 30, 54);
+   } 
+.optiona
+ { font-size: 35px;
+  color: aqua;
+}
+.optionb{
+font-size: 35px;
+  color: aqua;
+}
+.optionc{
+  font-size: 35px;
+  color: aqua;
+}
+.next3{
+  
+      height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+   padding-left: 15px;
+   padding-right: 15px;
+   background-size: cover;
+   color: rgb(7, 126, 101);
+   border:none;
+   border-radius: 7px;
+   font-weight: bold;
+   font-size: 20px;
+   position:absolute;
+   background-color: rgb(7, 171, 45);
+   left:55%;
+   bottom:20%;
+
+   
+}
+.next3:hover{
+    background-image: none;
+    background-color:  rgb(7, 126, 101);
+    color: url(cover-1.jpg);
+    transition: opacity 0.5s;
+
+}
+.next3:active{
+    opacity: 0.5;
+}
+#result{
+color:rgb(5, 38, 67);
+font-size: 30px;
+
+
+}
+
+
+    
+        </style>
+        <p
+        style="
+        font-size: 40px;
+        font-family: Ariel;
+        position: absolute;
+        top: 50px;
+        left:30%;
+        color:rgb(3, 76, 10);
+        "
+        >Dont get fooled by the previous question</p>
+        <div class="question1">
+        <h2 class="question">3.Which sea creature has three hearts?</h2>
+<label class="optiona">
+<input  type="radio" name="q1" value="a"> jellyfish </label > <br>
+<label class="optionb">
+<input  type="radio" name="q1" value="b"> octopus </label><br>
+<label  class="optionc">
+<input  type="radio" name="q1" value="c"> starfish</label><br>
+
+<button class="submit" onclick="checkAnswer()">Submit</button>
+
+<p id="result"></p>
+</div>
+<img class="fish" src="f.png">
+<img class="fish2" src="f2.png">
+<img class="fish3" src="f3.png">
+<script>
+function checkAnswer() {
+  const answer = document.querySelector('input[name="q1"]:checked');
+
+  if (!answer) {
+    document.getElementById("result").textContent = "Choose an answer first!";
+    return;
+  }
+
+  if (answer.value === "b") {
+    document.getElementById("result").textContent = "Correct! 🌊";
+  } else {
+    document.getElementById("result").textContent = "Someone was too confident";
+  }
+}
+</script>
+<a href="final6.html">
+<button class="next3">
+
+ next</button>
+ </a>
